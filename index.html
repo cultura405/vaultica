@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaultica</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    .header {
+      background-color: #1f1f23;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header img.logo {
+      width: 350px;
+      max-width: 90%;
+      animation: fadeInDown 1s ease-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      color: #2c93f1;
+      margin-top: 10px;
+      animation: fadeInUp 1.2s ease-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      animation: fadeInUp 1.5s ease-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    .buttons button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    .login-btn {
+      background-color: #2c93f1;
+      color: white;
+    }
+
+    .register-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    .plans {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 40px 20px;
+      gap: 20px;
+    }
+
+    .plan {
+      background-color: #1f1f23;
+      padding: 30px 20px;
+      border-radius: 20px;
+      width: 300px;
+      animation: fadeIn 1s ease;
+    }
+
+    .plan h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .plan.basic h3 {
+      color: #2c93f1;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .plan ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .plan .price {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .gold h3 { color: #ffc300; }
+    .ruby h3 { color: #ff4c4c; }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media screen and (max-width: 768px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header::before {
+        font-size: 200px;
+        right: 10px;
+        top: -30px;
+      }
+
+      .header img.logo {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo-vaultica-darkbg.png" alt="Logo Vaultica" class="logo" />
+    <p>Ahorra fácil. Registra todo. Logra más.</p>
+    <div class="buttons">
+      <button class="login-btn">Log In</button>
+      <button class="register-btn">Register</button>
+    </div>
+  </div>
+
+  <div class="plans">
+    <div class="plan basic">
+      <h3>PLAN BASIC</h3>
+      <ul>
+        <li>Ingresar meta de ahorro</li>
+        <li>Ingresar tiempo límite de ahorro</li>
+        <li>Calcular ahorro diario o semanal</li>
+        <li>Guardar cuánto llevas ahorrado</li>
+        <li>Ver cuánto te falta</li>
+      </ul>
+      <div class="price">FREE</div>
+    </div>
+
+    <div class="plan gold">
+      <h3>PLAN GOLD</h3>
+      <ul>
+        <li>Guardar varios planes de ahorro</li>
+        <li>Recordatorio diario para ahorrar</li>
+        <li>Mostrar barra de progreso (porcentaje)</li>
+        <li>Elimina anuncios</li>
+      </ul>
+      <div class="price">$4 USD AL MES<br>$30 USD ANUAL</div>
+    </div>
+
+    <div class="plan ruby">
+      <h3>PLAN RUBY</h3>
+      <ul>
+        <li>Notificaciones automáticas (correo o app)</li>
+        <li>Historial de ahorro (fecha y monto)</li>
+        <li>Exportar reporte a PDF o Excel</li>
+      </ul>
+      <div class="price">$8 USD AL MES<br>$49 USD ANUAL</div>
+    </div>
+  </div>
+
+</body>
+</html>
