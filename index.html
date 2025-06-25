@@ -9,40 +9,26 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
+      background-color: #19191c;
       color: white;
     }
 
     .header {
       background-color: #1f1f23;
-      padding: 60px 20px;
+      padding: 60px 20px 40px;
       text-align: center;
       position: relative;
-      overflow: hidden;
     }
 
     .header img.logo {
-      width: 350px;
-      max-width: 90%;
+      width: 380px;
+      max-width: 95%;
       animation: fadeInDown 1s ease-out;
-      position: relative;
-      z-index: 1;
-    }
-
-    .header p {
-      font-size: 1.2em;
-      color: #2c93f1;
-      margin-top: 10px;
-      animation: fadeInUp 1.2s ease-out;
-      position: relative;
-      z-index: 1;
     }
 
     .buttons {
       margin-top: 30px;
       animation: fadeInUp 1.5s ease-out;
-      position: relative;
-      z-index: 1;
     }
 
     .buttons button {
@@ -70,10 +56,11 @@
     }
 
     .plans {
+      background-color: #19191c;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 40px 20px;
+      padding: 40px 20px;
       gap: 20px;
     }
 
@@ -90,18 +77,23 @@
       margin-bottom: 20px;
     }
 
-    .plan.basic h3 {
-      color: #2c93f1;
-    }
+    .plan.basic h3 { color: #2c93f1; }
+    .plan.gold h3 { color: #ffc300; }
+    .plan.ruby h3 { color: #ff4c4c; }
 
     .plan ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .plan ul li {
-      padding: 8px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #333;
+    }
+
+    .plan ul li:last-child {
+      border-bottom: none;
     }
 
     .plan .price {
@@ -110,8 +102,17 @@
       font-weight: bold;
     }
 
-    .gold h3 { color: #ffc300; }
-    .ruby h3 { color: #ff4c4c; }
+    .slogan {
+      text-align: center;
+      margin: 40px 20px 60px;
+    }
+
+    .slogan p {
+      font-size: 1.4em;
+      color: #2c93f1;
+      font-weight: 500;
+      margin: 0;
+    }
 
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-30px); }
@@ -134,14 +135,8 @@
         align-items: center;
       }
 
-      .header::before {
-        font-size: 200px;
-        right: 10px;
-        top: -30px;
-      }
-
       .header img.logo {
-        width: 80%;
+        width: 85%;
       }
     }
   </style>
@@ -149,8 +144,7 @@
 <body>
 
   <div class="header">
-    <img src="logo-vaultica-darkbg.png" alt="Logo Vaultica" class="logo" />
-    <p>Ahorra fácil. Registra todo. Logra más.</p>
+    <img src="logo-vaultica-darkbg.png" alt="Vaultica" class="logo" />
     <div class="buttons">
       <button class="login-btn">Log In</button>
       <button class="register-btn">Register</button>
@@ -161,35 +155,45 @@
     <div class="plan basic">
       <h3>PLAN BASIC</h3>
       <ul>
-        <li>Ingresar meta de ahorro</li>
-        <li>Ingresar tiempo límite de ahorro</li>
+        <li>1 registro activo</li>
+        <li>Ingresar meta y tiempo límite de ahorro</li>
         <li>Calcular ahorro diario o semanal</li>
         <li>Guardar cuánto llevas ahorrado</li>
         <li>Ver cuánto te falta</li>
+        <li>Publicidad incluida</li>
       </ul>
-      <div class="price">FREE</div>
+      <div class="price">GRATIS</div>
     </div>
 
     <div class="plan gold">
       <h3>PLAN GOLD</h3>
       <ul>
-        <li>Guardar varios planes de ahorro</li>
+        <li>Hasta 5 registros activos</li>
         <li>Recordatorio diario para ahorrar</li>
-        <li>Mostrar barra de progreso (porcentaje)</li>
-        <li>Elimina anuncios</li>
+        <li>Mostrar barra de progreso</li>
+        <li>Historial de los últimos 30 días</li>
+        <li>Temas personalizables</li>
+        <li>Sin anuncios</li>
       </ul>
-      <div class="price">$4 USD AL MES<br>$30 USD ANUAL</div>
+      <div class="price">$4 USD / MES<br>$30 USD / AÑO</div>
     </div>
 
     <div class="plan ruby">
       <h3>PLAN RUBY</h3>
       <ul>
-        <li>Notificaciones automáticas (correo o app)</li>
-        <li>Historial de ahorro (fecha y monto)</li>
-        <li>Exportar reporte a PDF o Excel</li>
+        <li>Registros ilimitados</li>
+        <li>Notificaciones avanzadas (correo y app)</li>
+        <li>Exportar reporte a PDF y Excel</li>
+        <li>Historial completo de ahorro</li>
+        <li>Copias de seguridad en la nube</li>
+        <li>Asistente de ahorro con IA</li>
       </ul>
-      <div class="price">$8 USD AL MES<br>$49 USD ANUAL</div>
+      <div class="price">$8 USD / MES<br>$49 USD / AÑO</div>
     </div>
+  </div>
+
+  <div class="slogan">
+    <p>Ahorra fácil. Registra todo. Logra más.</p>
   </div>
 
 </body>
